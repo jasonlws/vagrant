@@ -1,10 +1,8 @@
 #!/bin/bash
 
 ## !IMPORTANT ##
-#
 ## This script is tested only in the generic/ubuntu2004 Vagrant box
 ## If you use a different version of Ubuntu or a different Ubuntu Vagrant box test this again
-#
 
 echo "[TASK 0] Setting TimeZone" 
 timedatectl set-timezone America/Toronto
