@@ -6,12 +6,12 @@ OS: Ubuntu 20.04
 
 1. Add Vagrant box image
 ```console
-$ vagrant box add generic/ubuntu2004
+vagrant box add generic/ubuntu2004
 ```
 
 2. Start Vagrant 
 ```console
-$ vagrant up
+vagrant up
 ```
 
 3. Kubernetes Dashboard
@@ -20,7 +20,7 @@ Access [https://127.0.0.1:31625](https://127.0.0.1:31625) and copy the token fro
 
 3. Destroy Vagrant
 ```console
-$ vagrant destroy jasonlws -f
+vagrant destroy jasonlws -f
 ```
 
 ## License
