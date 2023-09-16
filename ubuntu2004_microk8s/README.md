@@ -1,27 +1,46 @@
 # Environment
 
-Tools: Vagrant + Virtual Box
-Vagrant Box: generic/ubuntu2004
-OS: Ubuntu 20.04
+Environment: Ubuntu 20.04 with MicroK8S installed
 
-1. Add Vagrant box image
-```console
+### Install a Box
+
+This will download the box named `generic/ubuntu2004` from HashiCorp's Vagrant Cloud box catalog, where you can find and host boxes.
+
+```
 vagrant box add generic/ubuntu2004
 ```
 
-2. Start Vagrant 
+### Bring up a virtual machine
+
+Run the following from your terminal:
+
 ```console
 vagrant up
 ```
 
-3. Kubernetes Dashboard
+### Destroy a virtual machine
 
-Access [https://127.0.0.1:31625](https://127.0.0.1:31625) and copy the token from the last statement from `vagrant up`
+Run the following from your terminal:
 
-3. Destroy Vagrant
-```console
-vagrant destroy jasonlws -f
 ```
+vagrant destroy jasonlws-microk8s -f
+```
+
+### SSH
+
+SSH Connection Information:
+
+Host: `127.0.0.1`
+
+Port: `2222`
+
+User: `root`
+
+Password: `P@ssw0rd`
+
+### Access Kubernetes Dashboard
+
+Access [https://127.0.0.1:31625](https://127.0.0.1:31625) and copy the token from the last statement after `vagrant up` command.
 
 ## License
 
