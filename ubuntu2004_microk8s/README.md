@@ -14,7 +14,7 @@ vagrant box add generic/ubuntu2004
 
 Run the following from your terminal:
 
-```console
+```
 vagrant up
 ```
 
