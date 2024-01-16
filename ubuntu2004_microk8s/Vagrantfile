@@ -5,21 +5,21 @@ ENV['VAGRANT_NO_PARALLEL'] = 'yes'
 
 Vagrant.configure(2) do |config| 
 
-	config.vm.provision "shell", path: "bootstrap.sh"
+	config.vm.provision "shell", path: "config/ubuntu2004-microk8s-provision.sh"
 	
 	config.vm.define "jasonlws-microk8s" do |node| 
 
-		node.vm.box = "generic/ubuntu2004" 
-
-		node.vm.box_check_update = false 
-
 		node.vm.hostname="jasonlws-microk8s.com" 
+
+		node.vm.box = "generic/ubuntu2004" 
 
 		node.vm.network "private_network", ip: "192.168.56.100", netmask: "255.255.255.0"
 	
-		config.vm.network "forwarded_port", guest: 31625, host: 31625 #kubernetes-dashboard
+		node.vm.network "forwarded_port", guest: 31625, host: 31625 #kubernetes-dashboard
 
-		config.vm.synced_folder ".\\shared", "/root/jasonlws-microk8s"
+		node.vm.box_check_update = false 
+	
+		node.vm.synced_folder ".\\shared\\jasonlws-microk8s", "/root/jasonlws-microk8s"
 		
 		node.vm.provider :virtualbox do |v| 
 
