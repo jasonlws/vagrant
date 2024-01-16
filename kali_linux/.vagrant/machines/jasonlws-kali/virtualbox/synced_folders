@@ -1,1 +1,0 @@
-{"virtualbox":{"/root/jasonlws-kali":{"guestpath":"/root/jasonlws-kali","hostpath":"C:/Users/jason/Documents/jasonlws/vagrant/kali_linux/shared/jasonlws-kali","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/jason/Documents/jasonlws/vagrant/kali_linux","disabled":false,"__vagrantfile":true}}}
